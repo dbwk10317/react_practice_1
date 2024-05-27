@@ -8,6 +8,17 @@ const settings = [
     languageOptions: {
       globals: { ...globals.browser, ...globals.node },
     },
+    extends: [
+      'plugin:react/recommended',
+      'plugin:jsx-ally/recommended',
+      'plugin:prettier/recommended',
+      'plugin:react-hooks/recommended',
+    ],
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
   },
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
