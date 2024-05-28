@@ -1,24 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+import * as Data from './data';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>
+        {Data.randomName()}, {Data.randomJobTitle()}, {Data.makeRandomDayMonthYear()}
+      </p>
+      <img src={Data.randomAvatar()} height="50" alt="avatar" />
+      <img src={Data.randomImage()} height="300" alt="img" />
     </div>
   );
 }
